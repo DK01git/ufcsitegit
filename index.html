@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFC Fanatics Blog</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-ufcDarkGray text-ufcLightGray font-sans">
+    <!-- Header Section -->
+    <header class="bg-ufcBlack border-b-4 border-ufcRed">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/UFC_Logo.svg/1200px-UFC_Logo.svg.png" alt="UFC Blog" class="h-12">
+                    <h1 class="text-2xl font-bold gradient-text">FANATICS BLOG</h1>
+                </div>
+                
+                <div class="main-nav hidden md:block">
+                    <nav>
+                        <ul class="flex space-x-6">
+                            <li><a href="#" class="text-ufcWhite hover:text-ufcRed font-medium">Home</a></li>
+                            <li><a href="#" class="text-ufcWhite hover:text-ufcRed font-medium">Fight Analysis</a></li>
+                            <li><a href="#" class="text-ufcWhite hover:text-ufcRed font-medium">Predictions</a></li>
+                            <li><a href="#" class="text-ufcWhite hover:text-ufcRed font-medium">Fighter Stories</a></li>
+                            <li><a href="#" class="text-ufcWhite hover:text-ufcRed font-medium">Event Recaps</a></li>
+                            <li><a href="#" class="text-ufcWhite hover:text-ufcRed font-medium">Special Incidents</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="mobile-menu md:hidden">
+                    <button id="menuToggle" class="text-ufcWhite focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileNav" class="hidden md:hidden bg-ufcBlack py-2">
+            <nav>
+                <ul class="flex flex-col space-y-2 px-4">
+                    <li><a href="#" class="text-ufcWhite hover:text-ufcRed font-medium block py-2">Home</a></li>
+                    <li><a href="#" class="text-ufcWhite hover:text-ufcRed font-medium block py-2">Fight Analysis</a></li>
+                    <li><a href="#" class="text-ufcWhite hover:text-ufcRed font-medium block py-2">Predictions</a></li>
+                    <li><a href="#" class="text-ufcWhite hover:text-ufcRed font-medium block py-2">Fighter Stories</a></li>
+                    <li><a href="#" class="text-ufcWhite hover:text-ufcRed font-medium block py-2">Event Recaps</a></li>
+                    <li><a href="#" class="text-ufcWhite hover:text-ufcRed font-medium block py-2">Special Incidents</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-ufcBlack to-ufcDarkGray">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold text-ufcWhite mb-4">
+                        <span class="gradient-text">UFC</span> NEWS & ANALYSIS
+                    </h1>
+                    <p class="text-lg text-ufcLightGray mb-6">
+                        Your ultimate source for UFC fight breakdowns, fighter interviews, event predictions, 
+                        and behind-the-scenes coverage of the world's premier MMA organization.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#featured" class="bg-ufcRed hover:bg-red-800 text-ufcWhite px-6 py-3 rounded font-medium">
+                            Latest Posts
+                        </a>
+                        <a href="#newsletter" class="bg-transparent border border-ufcRed text-ufcRed hover:bg-ufcRed hover:text-ufcWhite px-6 py-3 rounded font-medium">
+                            Subscribe
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/ufc_2_1/s3/2023-04/Volkanovski%20Rodriguez%20HEAD%20SHOTS.png" 
+                         alt="UFC Fighters" 
+                         class="rounded-lg shadow-2xl border-4 border-ufcRed">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="bg-ufcDarkGray py-6">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <div class="relative">
+                    <input type="text" 
+                           placeholder="Search for fighters, events, or articles..." 
+                           class="w-full bg-ufcBlack text-ufcWhite border-2 border-ufcRed rounded-full py-3 px-6 focus:outline-none focus:ring-2 focus:ring-ufcRed">
+                    <button class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-ufcRed text-ufcWhite rounded-full p-2">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Posts Section -->
+    <section id="featured" class="py-12 bg-ufcBlack">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-ufcWhite">
+                    <span class="gradient-text">Featured</span> Posts
+                </h2>
+                <a href="#" class="text-ufcRed hover:text-red-300 font-medium">
+                    View All <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Post 1 -->
+                <article class="bg-ufcDarkGray rounded-lg overflow-hidden shadow-lg post-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/ufc_2_1/s3/2023-04/adesanya-pereira-ufc287-rotator.jpg" 
+                             alt="Israel Adesanya vs Alex Pereira" 
+                             class="w-full h-48 object-cover">
+                        <span class="absolute top-2 left-2 bg-ufcRed text-ufcWhite text-xs px-3 py-1 rounded-full uppercase font-bold">
+                            Main Event
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex space-x-2 mb-2">
+                            <span class="text-ufcRed text-sm font-bold">FIGHT ANALYSIS</span>
+                            <span class="text-ufcLightGray text-sm">• 3 days ago</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-ufcWhite mb-3">
+                            Breaking Down Adesanya vs Pereira: Technical Analysis of UFC 287 Main Event
+                        </h3>
+                        <p class="text-ufcLightGray mb-4">
+                            Detailed breakdown of the striking patterns, defensive moves, and tactical adjustments that led to Adesanya's spectacular KO victory...
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <div class="comment-avatar mr-2">JD</div>
+                                <span class="text-sm text-ufcLightGray">John Doe</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <span class="text-ufcLightGray text-sm"><i class="fas fa-eye"></i> 1.2K</span>
+                                <span class="text-ufcLightGray text-sm"><i class="fas fa-comment"></i> 84</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Post 2 -->
+                <article class="bg-ufcDarkGray rounded-lg overflow-hidden shadow-lg post-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/ufc_2_1/s3/2023-07/ufc-security-officer-head-shots-mma.jpg" 
+                             alt="UFC Security Special Incident" 
+                             class="w-full h-48 object-cover">
+                        <span class="absolute top-2 left-2 bg-ufcRed text-ufcWhite text-xs px-3 py-1 rounded-full uppercase font-bold">
+                            Exclusive
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex space-x-2 mb-2">
+                            <span class="text-ufcRed text-sm font-bold">SPECIAL INCIDENT</span>
+                            <span class="text-ufcLightGray text-sm">• 1 week ago</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-ufcWhite mb-3">
+                            Behind-the-Scenes: UFC's Elite Security Team That Prevents Octagon Jumpers
+                        </h3>
+                        <p class="text-ufcLightGray mb-4">
+                            We interviewed the unsung heroes of UFC events - the security team that has perfected intercepting fan intrusions with military precision...
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <div class="comment-avatar mr-2">JS</div>
+                                <span class="text-sm text-ufcLightGray">Jane Smith</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <span class="text-ufcLightGray text-sm"><i class="fas fa-eye"></i> 896</span>
+                                <span class="text-ufcLightGray text-sm"><i class="fas fa-comment"></i> 42</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Post 3 -->
+                <article class="bg-ufcDarkGray rounded-lg overflow-hidden shadow-lg post-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/ufc_2_1/s3/2023-07/UFC295-Jones-vs-Miocic-Poster.jpg" 
+                             alt="UFC 295 Poster" 
+                             class="w-full h-48 object-cover">
+                        <span class="absolute top-2 left-2 bg-ufcRed text-ufcWhite text-xs px-3 py-1 rounded-full uppercase font-bold">
+                            Upcoming
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex space-x-2 mb-2">
+                            <span class="text-ufcRed text-sm font-bold">PREDICTIONS</span>
+                            <span class="text-ufcLightGray text-sm">• 2 days ago</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-ufcWhite mb-3">
+                            UFC 295 Preview: Breaking Down the Jones vs Miocic Superfight
+                        </h3>
+                        <p class="text-ufcLightGray mb-4">
+                            Statistical analysis, fight metrics, and expert opinions on what could be the last fight for both UFC legends competing at Madison Square Garden...
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <div class="comment-avatar mr-2">MR</div>
+                                <span class="text-sm text-ufcLightGray">Mike Rogers</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <span class="text-ufcLightGray text-sm"><i class="fas fa-eye"></i> 2.1K</span>
+                                <span class="text-ufcLightGray text-sm"><i class="fas fa-comment"></i> 127</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Sections -->
+    <section class="py-12 bg-ufcDarkGray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-ufcWhite mb-8">
+                Explore <span class="gradient-text">Categories</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Fight Analysis -->
+                <div class="bg-ufcBlack rounded-lg overflow-hidden border-l-4 border-ufcRed">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-ufcRed text-ufcWhite p-3 rounded-full mr-4">
+                                <i class="fas fa-chart-line text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-ufcWhite">Fight Analysis</h3>
+                        </div>
+                        <p class="text-ufcLightGray mb-4">
+                            Technical breakdowns of recent fights with slow-motion analysis, statistics, and expert commentary.
+                        </p>
+                        <a href="#" class="text-ufcRed hover:text-red-300 font-medium">
+                            View Articles <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Fighter Stories -->
+                <div class="bg-ufcBlack rounded-lg overflow-hidden border-l-4 border-ufcRed">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-ufcRed text-ufcWhite p-3 rounded-full mr-4">
+                                <i class="fas fa-user-ninja text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-ufcWhite">Fighter Stories</h3>
+                        </div>
+                        <p class="text-ufcLightGray mb-4">
+                            Inspirational journeys, training routines, and untold stories from your favorite UFC athletes.
+                        </p>
+                        <a href="#" class="text-ufcRed hover:text-red-300 font-medium">
+                            View Articles <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Predictions -->
+                <div class="bg-ufcBlack rounded-lg overflow-hidden border-l-4 border-ufcRed">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-ufcRed text-ufcWhite p-3 rounded-full mr-4">
+                                <i class="fas fa-crystal-ball text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-ufcWhite">Predictions</h3>
+                        </div>
+                        <p class="text-ufcLightGray mb-4">
+                            Expert predictions for upcoming fights, potential upsets, and dark horses to watch.
+                        </p>
+                        <a href="#" class="text-ufcRed hover:text-red-300 font-medium">
+                            View Articles <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Event Recaps -->
+                <div class="bg-ufcBlack rounded-lg overflow-hidden border-l-4 border-ufcRed">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-ufcRed text-ufcWhite p-3 rounded-full mr-4">
+                                <i class="fas fa-trophy text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-ufcWhite">Event Recaps</h3>
+                        </div>
+                        <p class="text-ufcLightGray mb-4">
+                            Comprehensive recaps of UFC events with highlights, results, and performance analysis.
+                        </p>
+                        <a href="#" class="text-ufcRed hover:text-red-300 font-medium">
+                            View Articles <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Special Incidents -->
+                <div class="bg-ufcBlack rounded-lg overflow-hidden border-l-4 border-ufcRed">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-ufcRed text-ufcWhite p-3 rounded-full mr-4">
+                                <i class="fas fa-exclamation-triangle text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-ufcWhite">Special Incidents</h3>
+                        </div>
+                        <p class="text-ufcLightGray mb-4">
+                            Reporting on unusual occurrences, controversies, and behind-the-scenes UFC moments.
+                        </p>
+                        <a href="#" class="text-ufcRed hover:text-red-300 font-medium">
+                            View Articles <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Training Techniques -->
+                <div class="bg-ufcBlack rounded-lg overflow-hidden border-l-4 border-ufcRed">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-ufcRed text-ufcWhite p-3 rounded-full mr-4">
+                                <i class="fas fa-dumbbell text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-ufcWhite">Training Techniques</h3>
+                        </div>
+                        <p class="text-ufcLightGray mb-4">
+                            Explore the training methods and workout routines used by UFC champions and contenders.
+                        </p>
+                        <a href="#" class="text-ufcRed hover:text-red-300 font-medium">
+                            View Articles <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="py-16 bg-ufcBlack">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-ufcDarkGray rounded-lg p-8 md:p-10 shadow-lg border-t-4 border-ufcRed">
+                <div class="md:flex md:items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h3 class="text-2xl font-bold text-ufcWhite mb-3">
+                            Stay Updated with UFC News
+                        </h3>
+                        <p class="text-ufcLightGray mb-4">
+                            Get exclusive content, fight announcements, and analysis delivered to your inbox weekly.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-ufcWhite hover:text-ufcRed"><i class="fab fa-facebook-f text-xl"></i></a>
+                            <a href="#" class="text-ufcWhite hover:text-ufcRed"><i class="fab fa-twitter text-xl"></i></a>
+                            <a href="#" class="text-ufcWhite hover:text-ufcRed"><i class="fab fa-instagram text-xl"></i></a>
+                            <a href="#" class="text-ufcWhite hover:text-ufcRed"><i class="fab fa-youtube text-xl"></i></a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <form class="space-y-4">
+                            <div>
+                                <input type="text" 
+                                       placeholder="Your Name" 
+                                       class="w-full bg-ufcBlack border border-ufcLightGray rounded-lg newsletter-input py-3 px-4 text-ufcWhite focus:outline-none">
+                            </div>
+                            <div>
+                                <input type="email" 
+                                       placeholder="Email Address" 
+                                       class="w-full bg-ufcBlack border border-ufcLightGray rounded-lg newsletter-input py-3 px-4 text-ufcWhite focus:outline-none">
+                            </div>
+                            <div>
+                                <select class="w-full bg-ufcBlack border border-ufcLightGray rounded-lg newsletter-input py-3 px-4 text-ufcWhite focus:outline-none" title="Select your interests" aria-label="Select your interests">
+                                    <option value="">Select interests</option>
+                                    <option value="analysis">Fight Analysis</option>
+                                    <option value="predictions">Predictions</option>
+                                    <option value="fighter-stories">Fighter Stories</option>
+                                    <option value="recaps">Event Recaps</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-ufcRed hover:bg-red-800 text-ufcWhite font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Subscribe Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single Post Example with Comments -->
+    <section class="py-12 bg-ufcDarkGray">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <article class="bg-ufcBlack rounded-lg overflow-hidden shadow-lg mb-12">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/ufc_2_1/s3/2023-04/adesanya-pereira-faceoff.jpg" 
+                         alt="Adesanya vs Pereira Faceoff" 
+                         class="w-full h-64 md:h-80 object-cover">
+                    
+                    <div class="p-6 md:p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex space-x-2">
+                                <span class="bg-ufcRed text-ufcWhite text-xs px-3 py-1 rounded-full uppercase font-bold">
+                                    Main Event Analysis
+                                </span>
+                                <span class="text-ufcLightGray text-sm">• Updated 2 days ago</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button type="button" class="text-ufcLightGray hover:text-ufcRed" title="Bookmark" aria-label="Bookmark">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="text-ufcLightGray hover:text-ufcRed">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <h1 class="text-2xl md:text-4xl font-bold text-ufcWhite mb-4">
+                            Technical Breakdown: How Adesanya Finally Solved the Pereira Puzzle at UFC 287
+                        </h1>
+                        
+                        <div class="flex items-center mb-6">
+                            <div class="comment-avatar mr-4">JD</div>
+                            <div>
+                                <p class="text-sm font-medium text-ufcWhite">John Doe</p>
+                                <p class="text-xs text-ufcLightGray">UFC Analyst & Former Fighter</p>
+                            </div>
+                        </div>
+                        
+                        <div class="prose prose-invert max-w-none mb-8">
+                            <p class="mb-4">
+                                Israel Adesanya's knockout victory over Alex Pereira at UFC 287 wasn't just redemption - 
+                                it was a masterclass in tactical adjustment. After three previous encounters where Pereira 
+                                had Adesanya's number, "The Last Stylebender" made crucial changes that turned the tables 
+                                decisively in Miami.
+                            </p>
+                            
+                            <h3 class="text-xl font-bold text-ufcWhite my-4">The Footwork Revolution</h3>
+                            <p class="mb-4">
+                                The most noticeable difference came in Adesanya's footwork. Historically, Adesanya fought 
+                                Pereira moving backward, conceding ground to the powerful Brazilian kickboxer. This time, 
+                                Adesanya constantly circled to his right (Pereira's left), staying away from Pereira's 
+                                vaunted left hook while maintaining angle control.
+                            </p>
+                            
+                            <p class="mb-4">
+                                Statistical analysis shows Adesanya threw 63% of his strikes while moving laterally compared 
+                                to just 28% in their previous MMA fight. This constant movement prevented Pereira from 
+                                setting his feet for power shots while allowing Adesanya to dart in with quick combinations.
+                            </p>
+                            
+                            <h3 class="text-xl font-bold text-ufcWhite my-4">The Setup That Changed Everything</h3>
+                            <p class="mb-4">
+                                The finishing sequence didn't come out of nowhere. Adesanya spent rounds perfecting 
+                                his right hand setup, consistently throwing a right kick to the body that Pereira would 
+                                check with his left arm. By Round 2, Pereira's defensive reaction became predictable.
+                            </p>
+                            
+                            <p class="mb-4">
+                                At 4:21 of Round 2, Adesanya threw the body kick, Pereira lifted his left arm to block, 
+                                and Adesanya immediately feinted another kick before unleashing the right hand that 
+                                would end the fight. Pereira's left arm was out of position due to the expected kick 
+                                defense, leaving his chin completely exposed.
+                            </p>
+                        </div>
+                        
+                        <div class="border-t border-ufcDarkGray pt-6 mb-8">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 class="text-xl font-bold text-ufcWhite">
+                                    <i class="fas fa-comments text-ufcRed mr-2"></i> Comments (24)
+                                </h3>
+                                <button type="button" class="text-ufcRed hover:text-red-300 font-medium">
+                                    <i class="fas fa-sort-amount-down mr-1"></i> Sort By
+                                </button>
+                            </div>
+                            
+                            <!-- Comment 1 -->
+                            <div class="flex mb-6">
+                                <div class="comment-avatar mr-4">MM</div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <p class="font-medium text-ufcWhite">MMA_Fan99</p>
+                                        <span class="text-xs text-ufcLightGray">2 hours ago</span>
+                                    </div>
+                                    <p class="text-ufcLightGray mb-2">
+                                        Incredible analysis! I noticed the footwork difference but didn't realize 
+                                        the significance until reading this. Adesanya really is a chess player in 
+                                        the octagon.
+                                    </p>
+                                    <div class="flex items-center text-sm">
+                                        <button type="button" class="text-ufcLightGray hover:text-ufcRed mr-4">
+                                            <i class="fas fa-thumbs-up mr-1"></i> 15
+                                        </button>
+                                        <button type="button" class="text-ufcLightGray hover:text-ufcRed mr-4">
+                                            <i class="fas fa-thumbs-down mr-1"></i> 2
+                                        </button>
+                                        <button type="button" class="text-ufcRed font-medium">
+                                            Reply
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Comment 2 -->
+                            <div class="flex mb-6">
+                                <div class="comment-avatar mr-4">KF</div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <p class="font-medium text-ufcWhite">KickboxerFan</p>
+                                        <span class="text-xs text-ufcLightGray">5 hours ago</span>
+                                    </div>
+                                    <p class="text-ufcLightGray mb-2">
+                                        Pereira needs to go back to kickboxing. MMA clearly isn't working for him 
+                                        against elite strikers who can mix it up.
+                                    </p>
+                                    <div class="flex items-center text-sm">
+                                        <button type="button" class="text-ufcLightGray hover:text-ufcRed mr-4">
+                                            <i class="fas fa-thumbs-up mr-1"></i> 8
+                                        </button>
+                                        <button type="button" class="text-ufcLightGray hover:text-ufcRed mr-4">
+                                            <i class="fas fa-thumbs-down mr-1"></i> 22
+                                        </button>
+                                        <button type="button" class="text-ufcRed font-medium">
+                                            Reply
+                                        </button>
+                                    </div>
+                                    
+                                    <!-- Reply -->
+                                    <div class="bg-ufcDarkGray p-4 rounded-lg mt-4">
+                                        <div class="flex">
+                                            <div class="comment-avatar mr-4">TU</div>
+                                            <div class="flex-1">
+                                                <div class="flex justify-between items-center mb-2">
+                                                    <p class="font-medium text-ufcWhite">TheUndisputed</p>
+                                                    <span class="text-xs text-ufcLightGray">1 hour ago</span>
+                                                </div>
+                                                <p class="text-ufcLightGray mb-2">
+                                                    Disagree completely. Pereira just needs to improve his wrestling 
+                                                    defense. His striking is still world class.
+                                                </p>
+                                                <div class="flex items-center text-sm">
+                                                    <button type="button" class="text-ufcLightGray hover:text-ufcRed mr-4">
+                                                        <i class="fas fa-thumbs-up mr-1"></i> 4
+                                                    </button>
+                                                    <button type="button" class="text-ufcLightGray hover:text-ufcRed mr-4">
+                                                        <i class="fas fa-thumbs-down mr-1"></i> 0
+                                                    </button>
+                                                    <button type="button" class="text-ufcRed font-medium">
+                                                        Reply
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Comment Form -->
+                        <div class="border-t border-ufcDarkGray pt-6">
+                            <h4 class="text-lg font-bold text-ufcWhite mb-4">Leave a Comment</h4>
+                            <form>
+                                <div class="mb-4">
+                                    <textarea class="w-full bg-ufcDarkGray border border-ufcLightGray rounded-lg newsletter-input py-3 px-4 text-ufcWhite focus:outline-none" 
+                                              rows="4" 
+                                              placeholder="Write your comment here..."></textarea>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center">
+                                        <div class="comment-avatar mr-2">Y</div>
+                                        <span class="text-sm text-ufcLightGray">Posting as Guest</span>
+                                    </div>
+                                    <button type="submit" class="bg-ufcRed hover:bg-red-800 text-ufcWhite font-bold py-2 px-6 rounded-lg transition duration-300">
+                                        Post Comment
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Social Sharing -->
+                <div class="bg-ufcBlack rounded-lg p-6 mb-8">
+                    <h4 class="text-lg font-bold text-ufcWhite mb-4">Share This Article</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-blue-600 text-ufcWhite px-4 py-2 rounded-lg flex items-center">
+                            <i class="fab fa-facebook-f mr-2"></i> Facebook
+                        </a>
+                        <a href="#" class="bg-blue-400 text-ufcWhite px-4 py-2 rounded-lg flex items-center">
+                            <i class="fab fa-twitter mr-2"></i> Twitter
+                        </a>
+                        <a href="#" class="bg-pink-600 text-ufcWhite px-4 py-2 rounded-lg flex items-center">
+                            <i class="fab fa-instagram mr-2"></i> Instagram
+                        </a>
+                        <a href="#" class="bg-red-600 text-ufcWhite px-4 py-2 rounded-lg flex items-center">
+                            <i class="fab fa-youtube mr-2"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Related Articles -->
+                <div>
+                    <h3 class="text-2xl font-bold text-ufcWhite mb-6">Related Articles</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <article class="bg-ufcBlack rounded-lg overflow-hidden flex">
+                            <div class="w-1/3">
+                                <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/ufc_2_1/s3/2023-06/ufc-striking-stats.jpg" 
+                                     alt="Striking Stats" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-2/3 p-4">
+                                <h4 class="text-lg font-bold text-ufcWhite mb-2">
+                                    UFC Striking Stats That Will Change How You Watch Fights
+                                </h4>
+                                <p class="text-sm text-ufcLightGray mb-2">Apr 15, 2023 • Fight Analysis</p>
+                                <a href="#" class="text-ufcRed hover:text-red-300 text-sm font-medium">
+                                    Read More <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <article class="bg-ufcBlack rounded-lg overflow-hidden flex">
+                            <div class="w-1/3">
+                                <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/ufc_2_1/s3/2023-05/ufc-287-press-conference.jpg" 
+                                     alt="UFC Press Conference" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-2/3 p-4">
+                                <h4 class="text-lg font-bold text-ufcWhite mb-2">
+                                    Press Conference Breakdown: What Fighters Really Mean
+                                </h4>
+                                <p class="text-sm text-ufcLightGray mb-2">Apr 10, 2023 • Special Incidents</p>
+                                <a href="#" class="text-ufcRed hover:text-red-300 text-sm font-medium">
+                                    Read More <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ufcBlack text-ufcLightGray py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold text-ufcWhite mb-4">UFC FANATICS BLOG</h4>
+                    <p class="mb-4">
+                        Your premier source for in-depth UFC analysis, fighter stories, and event coverage.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-ufcLightGray hover:text-ufcRed">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-ufcLightGray hover:text-ufcRed">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-ufcLightGray hover:text-ufcRed">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-ufcLightGray hover:text-ufcRed">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-ufcWhite mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-ufcRed">Fight Analysis</a></li>
+                        <li><a href="#" class="hover:text-ufcRed">Predictions</a></li>
+                        <li><a href="#" class="hover:text-ufcRed">Fighter Stories</a></li>
+                        <li><a href="#" class="hover:text-ufcRed">Event Recaps</a></li>
+                        <li><a href="#" class="hover:text-ufcRed">Special Incidents</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-ufcWhite mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-ufcRed">Home</a></li>
+                        <li><a href="#" class="hover:text-ufcRed">About Us</a></li>
+                        <li><a href="#" class="hover:text-ufcRed">Authors</a></li>
+                        <li><a href="#" class="hover:text-ufcRed">Contact</a></li>
+                        <li><a href="#" class="hover:text-ufcRed">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-ufcWhite mb-4">Newsletter</h4>
+                    <p class="mb-4">
+                        Subscribe to get the latest UFC news delivered to your inbox weekly.
+                    </p>
+                    <form class="space-y-2">
+                        <input type="email" 
+                               placeholder="Your Email" 
+                               class="w-full bg-ufcDarkGray border border-ufcLightGray rounded-lg newsletter-input py-2 px-3 text-ufcWhite focus:outline-none text-sm">
+                        <button type="submit" class="bg-ufcRed hover:bg-red-800 text-ufcWhite text-sm font-medium py-2 px-4 rounded-lg transition duration-300 w-full">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-ufcDarkGray pt-8 text-center">
+                <p>
+                    &copy; 2023 UFC Fanatics Blog. All rights reserved. This site is not affiliated with UFC or its partners.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('hidden');
+        });
+        
+        // Sticky header on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

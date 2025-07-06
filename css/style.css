@@ -1,0 +1,132 @@
+/* Main stylesheet for UFC Fanatics Blog */
+/* UFC Color Palette */
+:root {
+    --ufc-red: #d20a0a;
+    --ufc-black: #000000;
+    --ufc-white: #ffffff;
+    --ufc-dark-gray: #1a1a1a;
+    --ufc-light-gray: #e5e5e5;
+}
+
+body {
+    background: var(--ufc-dark-gray);
+    color: var(--ufc-light-gray);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #d20a0a, #8a0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.bg-ufcRed { background-color: var(--ufc-red) !important; }
+.bg-ufcBlack { background-color: var(--ufc-black) !important; }
+.bg-ufcWhite { background-color: var(--ufc-white) !important; }
+.bg-ufcDarkGray { background-color: var(--ufc-dark-gray) !important; }
+.bg-ufcLightGray { background-color: var(--ufc-light-gray) !important; }
+
+.text-ufcRed { color: var(--ufc-red) !important; }
+.text-ufcBlack { color: var(--ufc-black) !important; }
+.text-ufcWhite { color: var(--ufc-white) !important; }
+.text-ufcDarkGray { color: var(--ufc-dark-gray) !important; }
+.text-ufcLightGray { color: var(--ufc-light-gray) !important; }
+
+.border-ufcRed { border-color: var(--ufc-red) !important; }
+.border-ufcBlack { border-color: var(--ufc-black) !important; }
+.border-ufcWhite { border-color: var(--ufc-white) !important; }
+.border-ufcDarkGray { border-color: var(--ufc-dark-gray) !important; }
+
+/* Buttons */
+.btn-ufc {
+    background: var(--ufc-red);
+    color: var(--ufc-white);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(210, 10, 10, 0.15);
+    cursor: pointer;
+}
+.btn-ufc:hover, .btn-ufc:focus {
+    background: #8a0000;
+    color: var(--ufc-white);
+    box-shadow: 0 4px 16px rgba(210, 10, 10, 0.25);
+}
+
+/* Card Hover */
+.post-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.post-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(210, 10, 10, 0.25);
+    border-color: var(--ufc-red);
+}
+
+/* Inputs */
+input, textarea, select {
+    background: var(--ufc-black);
+    color: var(--ufc-white);
+    border: 1.5px solid var(--ufc-light-gray);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+input:focus, textarea:focus, select:focus {
+    border-color: var(--ufc-red);
+    box-shadow: 0 0 0 2px rgba(210, 10, 10, 0.3);
+    outline: none;
+}
+
+/* Avatars */
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--ufc-red);
+    color: var(--ufc-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(210, 10, 10, 0.15);
+}
+
+/* Section Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--ufc-white);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Links */
+a {
+    color: var(--ufc-red);
+    transition: color 0.2s;
+}
+a:hover, a:focus {
+    color: #8a0000;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: var(--ufc-black);
+    color: var(--ufc-light-gray);
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+    }
+} 
